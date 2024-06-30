@@ -1,0 +1,21 @@
+ion-header {
+    --background: #4caf50; /* Fondo del encabezado */
+    color: white; /* Color del texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el encabezado */
+  }
+  
+  ion-toolbar {
+    padding: 0 16px;
+  }
+  
+  ion-title {
+    font-size: 1.5em; /* Tamaño del título */
+    font-weight: bold; /* Negrita */
+    text-align: center; /* Centrar el texto */
+    color: rgb(0, 0, 0); /* Color del texto */
+    background-color: #4caf50; /* Color de fondo del encabezado */
+    color: white; /* Color del texto del encabezado */
+    padding: 16px;
+  }
+  
+  

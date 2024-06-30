@@ -1,0 +1,51 @@
+ion-header {
+  --background: #4caf50; /* Fondo del encabezado */
+  color: white; /* Color del texto */
+}
+
+ion-toolbar {
+  padding: 0 16px;
+}
+
+ion-title {
+  font-size: 1.5em; /* Tamaño del título */
+  font-weight: bold; /* Negrita */
+  text-align: center; /* Centrar el texto */
+  color: white; /* Color del texto */
+}
+
+ion-content {
+  --background: #f0f0f0; /* Fondo del contenido */
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 100%; /* Asegurar que ocupe todo el alto de la página */
+  padding: 16px;
+}
+
+.welcome-card {
+  width: 100%; /* Ancho del 90% del contenedor */
+  max-width: 2000px; /* Ancho máximo del contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.welcome-container {
+  text-align: center; /* Centrar el texto */
+  padding: 32px; /* Aumentar el relleno */
+}
+
+.welcome-container h1 {
+  font-size: 2.5em; /* Aumentar tamaño del encabezado */
+  margin-bottom: 16px;
+}
+
+.welcome-container p {
+  font-size: 1.2em; /* Tamaño del párrafo */
+  margin-bottom: 24px;
+}
+
+ion-button {
+  --background: #4caf50; /* Fondo del botón */
+  color: white; /* Color del texto del botón */
+}

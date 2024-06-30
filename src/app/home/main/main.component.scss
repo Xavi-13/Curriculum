@@ -1,0 +1,70 @@
+ion-header {
+  --background: #4caf50; /* Fondo del encabezado */
+  color: white; /* Color del texto */
+}
+
+ion-toolbar {
+  padding: 0 16px;
+}
+
+ion-title {
+  font-size: 1.5em; /* Tamaño del título */
+  font-weight: bold; /* Negrita */
+  text-align: center; /* Centrar el texto */
+  color: white; /* Color del texto */
+}
+
+ion-content {
+  --background: #f0f0f0; /* Fondo del contenido */
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 100%; /* Asegurar que ocupe todo el alto de la página */
+  padding: 16px;
+}
+
+.modulos-card {
+  width: 100%; /* Ancho completo del contenedor */
+  max-width: 1515px; /* Ancho máximo del contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+ion-card-header,
+ion-card-content {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  flex-direction: column; /* Alineación vertical */
+  text-align: center; /* Centrar el texto */
+}
+
+.modulos-list {
+  list-style: none; /* Eliminar puntos de la lista */
+  padding: 0;
+  width: 100%; /* Ancho completo */
+}
+
+ion-item {
+  --background: #ffffff; /* Fondo blanco para cada item */
+  margin: 8px 0; /* Espaciado entre items */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para cada item */
+}
+
+ion-item li {
+  display: block; /* Bloque completo */
+  width: 100%; /* Ancho completo */
+  padding: 12px 16px; /* Relleno interno */
+  font-size: 1.2em; /* Tamaño del texto */
+  text-align: center; /* Centrar texto */
+}
+
+ion-item li a {
+  text-decoration: none; /* Sin subrayado */
+  color: #4caf50; /* Color del texto */
+}
+
+ion-item li a:hover {
+  color: #388e3c; /* Color del texto al pasar el ratón */
+}
