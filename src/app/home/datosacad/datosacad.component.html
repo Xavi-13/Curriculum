@@ -1,3 +1,133 @@
-<p>
-  datosacad works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <div id="headercontainer">
+      <div class="logo">
+        <a href="#"><img width="60" height="60" src="assets/logo.jpg" alt="Logo"></a>
+      </div>
+      <div class="Head">
+        Datos Académicos
+      </div>
+    </div>
+    <div class="separator"></div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <form [formGroup]="datosForm">
+      <!-- Perfil Profesional -->
+      <h5>Perfil Profesional</h5>
+      <ion-item>
+        <ion-input fill="outline" placeholder="Proporcione una descripción de su perfil." maxlength="200" formControlName="perfil"></ion-input>
+        <small *ngIf="perfilNoValido" class="text-danger">Este campo es obligatorio</small>
+      </ion-item>
+
+      <!-- Instituciones Académicas -->
+      <h5>Instituciones Académicas</h5>
+      <ion-item>
+        <ion-select fill="outline" placeholder="Selecciona las Instituciones en las que estudiaste" multiple="true" formControlName="instituciones">
+          <ion-select-option value="unam">Universidad Nacional Autónoma de México (UNAM)</ion-select-option>
+          <ion-select-option value="tese">Tecnológico de Estudios Superiores de Ecatepec (TESE)</ion-select-option>
+          <ion-select-option value="ipn">Instituto Politécnico Nacional (IPN)</ion-select-option>
+          <ion-select-option value="itesm">Tecnológico de Monterrey (ITESM)</ion-select-option>
+          <ion-select-option value="uia">Universidad Iberoamericana (UIA)</ion-select-option>
+          <ion-select-option value="uam">Universidad Autónoma Metropolitana (UAM)</ion-select-option>
+          <ion-select-option value="uvm">Universidad del Valle de México (UVM)</ion-select-option>
+          <ion-select-option value="ulsa">Universidad La Salle (ULSA)</ion-select-option>
+          <ion-select-option value="ucsj">Universidad del Claustro de Sor Juana (UCSJ)</ion-select-option>
+          <ion-select-option value="up">Universidad Panamericana (UP)</ion-select-option>
+        </ion-select>
+        <small *ngIf="institucionesNoValido" class="text-danger">Seleccione una opción</small>
+      </ion-item>
+
+      <!-- Grado Académico -->
+      <h5>Grado Académico</h5>
+      <ion-item>
+        <ion-select fill="outline" placeholder="Selecciona tu último grado de estudios" formControlName="gradoaca">
+          <ion-select-option value="lic">Licenciado/a</ion-select-option>
+          <ion-select-option value="ing">Ingeniero/a</ion-select-option>
+          <ion-select-option value="mast">Maestro/a</ion-select-option>
+          <ion-select-option value="doc">Doctor/a</ion-select-option>
+          <ion-select-option value="tec">Técnico/a</ion-select-option>
+          <ion-select-option value="bach">Bachillerato</ion-select-option>
+          <ion-select-option value="sec">Secundaria</ion-select-option>
+          <ion-select-option value="pri">Primaria</ion-select-option>
+        </ion-select>
+        <small *ngIf="gradoacaNoValido" class="text-danger">Seleccione una opción</small>
+      </ion-item>
+
+      <!-- Disciplina/Áreas Académicas -->
+      <h5>Disciplina/Áreas Académicas</h5>
+      <ion-item>
+        <ion-select fill="outline" placeholder="Selecciona las áreas en las que te preparaste" multiple="true" formControlName="disciplina">
+          <ion-select-option value="ae">Administración de Empresas</ion-select-option>
+          <ion-select-option value="cp">Contaduría Pública</ion-select-option>
+          <ion-select-option value="ic">Ingeniería Civil</ion-select-option>
+          <ion-select-option value="m">Medicina</ion-select-option>
+          <ion-select-option value="d">Derecho</ion-select-option>
+          <ion-select-option value="psi">Psicología</ion-select-option>
+          <ion-select-option value="a">Arquitectura</ion-select-option>
+          <ion-select-option value="c">Comunicación</ion-select-option>
+          <ion-select-option value="e">Educación</ion-select-option>
+          <ion-select-option value="dg">Diseño Gráfico</ion-select-option>
+          <ion-select-option value="isc">Ingeniería en Sistemas Computacionales</ion-select-option>
+          <ion-select-option value="merc">Mercadotecnia</ion-select-option>
+          <ion-select-option value="cc">Ciencias de la Computación</ion-select-option>
+        </ion-select>
+        <small *ngIf="disciplinaNoValido" class="text-danger">Seleccione una opción</small>
+      </ion-item>
+
+      <!-- Fechas -->
+      <h5>Fechas de Inicio y Término</h5>
+      <div class="date-container">
+        <ion-item class="date-column">
+          
+          <ion-input fill="outline" type="date" formControlName="fechaInicio"></ion-input>
+          <small *ngIf="fechaInicioNoValido" class="text-danger">Este campo es obligatorio</small>
+        </ion-item>
+        <ion-item class="date-column">
+          
+          <ion-input fill="outline" type="date" formControlName="fechaTermino"></ion-input>
+          <small *ngIf="fechaTerminoNoValido" class="text-danger">Este campo es obligatorio</small>
+        </ion-item>
+      </div>
+
+      <!-- Idiomas -->
+      <h5>Idiomas</h5>
+      <div class="idiomas-container">
+        <ion-item class="idioma-item">
+          <ion-select fill="outline" placeholder="Selecciona un idioma" formControlName="idiomaSeleccionado">
+            <ion-select-option value="ingles">Inglés</ion-select-option>
+            <ion-select-option value="espanol">Español</ion-select-option>
+            <ion-select-option value="frances">Francés</ion-select-option>
+            <ion-select-option value="aleman">Alemán</ion-select-option>
+            <ion-select-option value="italiano">Italiano</ion-select-option>
+            <!-- Agrega más idiomas según sea necesario -->
+          </ion-select>
+          <small *ngIf="idiomaSeleccionadoNoValido" class="text-danger">Seleccione un idioma</small>
+        </ion-item>
+
+        <ion-item class="nivel-item">
+          <ion-select fill="outline" placeholder="Selecciona el nivel de dominio" formControlName="nivelDominio">
+            <ion-select-option value="a1">A1 - Principiante (Beginner)</ion-select-option>
+            <ion-select-option value="a2">A2 - Elemental (Elementary)</ion-select-option>
+            <ion-select-option value="b1">B1 - Intermedio (Intermediate)</ion-select-option>
+            <ion-select-option value="b2">B2 - Intermedio alto (Upper Intermediate)</ion-select-option>
+            <ion-select-option value="c1">C1 - Avanzado (Advanced)</ion-select-option>
+            <ion-select-option value="c2">C2 - Dominio (Proficiency)</ion-select-option>
+          </ion-select>
+          <small *ngIf="nivelDominioNoValido" class="text-danger">Seleccione un nivel</small>
+        </ion-item>
+      </div>
+
+      <!-- Archivo de Imagen -->
+      <h5>Certificado de Idioma</h5>
+      <ion-item>
+        <input type="file" class="upload-input" (change)="onFileSelected($event)" />
+        <small *ngIf="imagenNoValido" class="text-danger">Este campo es obligatorio</small>
+      </ion-item>
+
+      <ion-button expand="full" (click)="guardar()">Guardar</ion-button>
+    </form>
+  </div>
+</ion-content>

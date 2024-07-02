@@ -1,0 +1,136 @@
+
+ion-header{
+    --height:100px;
+    --background-color: transparent;
+  }
+  ion-toolbar{
+      --background: #ffffff00;
+      --padding-top: 20px;
+      --padding-bottom: 20px;
+  
+      #headercontainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;    
+    .logo{
+      display: flex;
+      margin-left: 5%;
+      align-items: center;
+    }  
+    .Head{
+      color: #4caf50;
+      display: flex;
+      margin-right: 30%;
+      font-family: 'Times New Roman';
+      align-content: center;  
+      font-size: 64px;
+      font-weight: bold;
+    }
+  }
+ }
+ .separator {
+    width: 100%;
+    height: 15px;
+    background-color: #4caf50; 
+    margin-top: 5px;}
+
+ion-content {
+    --background: #131c7485;
+  }
+/* Estilo para etiquetas h5 */
+h5 {
+    color: #214b23; 
+    margin-top: 20px;
+  }
+  /* Contenedor principal */
+  .container {
+    background-color: #fdfdfd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Alinear el título al centro */
+  .ion-text-center {
+    text-align: center;
+  }
+  
+  .idiomas-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  
+  ion-item {
+    --background: rgba(255, 255, 255, 0.5); /* Fondo blanco con 50% de transparencia */
+    --color: black;
+    --background-color: #ffffff;
+    --placeholder-color: #dddddd;
+  }
+  
+  /* Estilo para los botones */
+  ion-button {
+    margin-top: 15px;
+  }
+  
+  /* Estilo para el contenedor de las fechas */
+  .date-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: #fff;
+  }
+  
+  /* Estilo para las columnas de fecha */
+  .date-column {
+    flex: 1;
+  }
+  
+  /* Estilo para la lista de idiomas */
+  .language-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+  }
+  
+  /* Estilo para los grupos de radio */
+  ion-radio-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo para el componente de carga de archivos */
+  .upload-input {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  /* Estilo para el texto del componente de carga de archivos */
+  .upload-label {
+    font-weight: bold;
+  }
+  
+  /* Estilo para el botón del componente de carga de archivos */
+  .upload-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Cambiar el color del botón cuando se pasa el cursor sobre él */
+  .upload-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilo para mensajes de error */
+  .text-danger {
+    color: red;
+    font-size: 0.9em;
+  }
+  
