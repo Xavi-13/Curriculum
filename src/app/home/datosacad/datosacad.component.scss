@@ -63,10 +63,15 @@ h5 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;/* ANCHO */
+    width: 50%;/* ANCHO */
     height: 50%;/* ALTO */
    
   } 
+  .botonGuardar{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
   .idiomas-container {
     display: flex;
     justify-content: space-between;
