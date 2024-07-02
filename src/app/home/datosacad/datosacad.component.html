@@ -1,12 +1,19 @@
 <ion-header>
   <ion-toolbar>
     <div id="headercontainer">
+
       <div class="logo">
-        <a href="#"><img width="60" height="60" src="assets/logo.jpg" alt="Logo"></a>
+        <a href="#"><img 
+          width="60" 
+          height="60" 
+          alt="Logo"
+          src="data:image/png;base64,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">
+          </a>
       </div>
       <div class="Head">
         Datos Académicos
       </div>
+      
     </div>
     <div class="separator"></div>
   </ion-toolbar>
@@ -126,8 +133,16 @@
         <input type="file" class="upload-input" (change)="onFileSelected($event)" />
         <small *ngIf="imagenNoValido" class="text-danger">Este campo es obligatorio</small>
       </ion-item>
+      <br>
+      <br>
+      <a (click)="guardar()" class="btn-neon">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span>
+        Guardar
+    </a>
 
-      <ion-button expand="full" (click)="guardar()">Guardar</ion-button>
     </form>
   </div>
 </ion-content>
