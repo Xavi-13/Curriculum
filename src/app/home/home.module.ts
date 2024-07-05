@@ -14,6 +14,7 @@ import { CertificaComponent } from './certifica/certifica.component';
 import { MainComponent } from './main/main.component';
 import { HeadComponent } from './head/head.component';
 import { FootComponent } from './foot/foot.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FootComponent } from './foot/foot.component';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   declarations: [HomePage,DatosacadComponent,DatosperComponent,ExperienciaComponent,ProyectosComponent,PublicacionComponent,CertificaComponent,MainComponent,HeadComponent,FootComponent]
 })

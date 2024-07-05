@@ -1,5 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-datosacad',
@@ -9,7 +11,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class DatosacadComponent implements OnInit {
   datosForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,private apiService: ApiService) {
     this.datosForm = this.fb.group({
       perfil: ['', [Validators.required]],
       instituciones: ['', [Validators.required]],
@@ -81,4 +83,8 @@ export class DatosacadComponent implements OnInit {
     console.log('Subir archivo...');
     // Aquí puedes agregar la lógica para subir el archivo al servidor o manejarlo de otra manera.
   }
+  registros(){
+    this.apiService.obtenerDatosAPI().subscribe(data=>{
+      console.log(data)}); 
+   }
 }
